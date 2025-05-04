@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+header {
+    background-color: #e6d6f2;
+    color: #5c5470;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+nav {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+nav a {
+    margin: 0 15px;
+    color: #5c5470;
+    text-decoration: none;
+    font-weight: bold;
+}
+section {
+    padding: 40px 20px;
+}
+section h2 {
+    text-align: center;
+    color: #5c5470;
+}
+.about, .services, .testimonials, .contact {
+    max-width: 1200px;
+    margin: auto;
+}
+.about img, .services img, .testimonials img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.testimonials {
+    font-size: 20px;
+}
+footer {
+    background-color: #fcefe3;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+button {
+    background-color: #5c5470;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+}
+button:hover {
+    background-color: #7c6a97;
+}
