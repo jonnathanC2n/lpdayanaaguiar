@@ -1,72 +1,651 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VivaMov Fisioterapia - Dayana Aguiar</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VivaMov Fisioterapia — Dayana Aguiar | Fisioterapeuta</title>
+  <meta name="description" content="VivaMov Fisioterapia com Dayana Aguiar. Fisioterapia ortopédica, reabilitação pós-cirúrgica e pilates terapêutico. Agende sua avaliação.">
+  <meta name="keywords" content="fisioterapia, dayana aguiar, vivamov, pilates terapêutico, reabilitação, fisioterapeuta">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>VivaMov Fisioterapia</h1>
-    <p>Com Dayana Aguiar - Cuidando de você com carinho e movimento</p>
-</header>
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar-vivamov" id="mainNav">
+    <div class="container d-flex align-items-center justify-content-between">
 
-<nav>
-    <a href="#about">Sobre</a>
-    <a href="#services">Serviços</a>
-    <a href="#testimonials">Depoimentos</a>
-    <a href="#contact">Contato</a>
-</nav>
+      <!-- Brand -->
+      <a href="#hero" class="navbar-brand-logo">
+        <div class="brand-icon">
+          <i class="bi bi-activity"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">VivaMov</span>
+          <span class="brand-tagline">Fisioterapia</span>
+        </div>
+      </a>
 
-<section id="about" class="about">
-    <h2>Sobre Dayana Aguiar</h2>
-    <img src="img/dayana.jpg" alt="Foto de Dayana Aguiar">
-    <p>Sou Dayana Aguiar, fisioterapeuta apaixonada por ajudar pessoas a recuperarem sua saúde e qualidade de vida. Com mais de 10 anos de experiência, atendo com técnicas modernas e um olhar humano. Meu compromisso é com seu bem-estar e evolução.</p>
-</section>
+      <!-- Desktop Nav -->
+      <div class="d-none d-lg-flex align-items-center gap-1">
+        <a href="#about"        class="nav-link-custom">Sobre</a>
+        <a href="#services"     class="nav-link-custom">Serviços</a>
+        <a href="#testimonials" class="nav-link-custom">Depoimentos</a>
+        <a href="#contact"      class="nav-link-custom">Contato</a>
+        <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20com%20a%20Dayana%20Aguiar."
+           target="_blank"
+           class="nav-link-custom btn-nav-cta ms-2">
+          <i class="bi bi-calendar-heart me-1"></i> Agendar
+        </a>
+      </div>
 
-<section id="services" class="services">
-    <h2>Serviços</h2>
-    <div class="services-container">
-        <div class="service-card">
-            <h3>Fisioterapia Ortopédica</h3>
-            <img src="img/ortopedia.jpg" alt="Fisioterapia ortopédica">
-            <p>Tratamento de lesões musculares, articulares e ósseas para recuperação rápida e eficiente.</p>
-        </div>
-        <div class="service-card">
-            <h3>Reabilitação Pós-Cirúrgica</h3>
-            <img src="img/pos_cirurgico.jpg" alt="Reabilitação pós-cirúrgica">
-            <p>Acompanhamento especializado após cirurgias ortopédicas e neurológicas para recuperação funcional.</p>
-        </div>
-        <div class="service-card">
-            <h3>Pilates Terapêutico</h3>
-            <img src="img/pilates.jpg" alt="Pilates terapêutico">
-            <p>Exercícios personalizados para fortalecimento, flexibilidade e alívio de dores crônicas.</p>
-        </div>
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler d-flex d-lg-none align-items-center"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu"
+              aria-label="Abrir menu">
+        <i class="bi bi-list" style="font-size:1.4rem; color:var(--primary);"></i>
+      </button>
     </div>
-</section>
+  </nav>
 
-<section id="testimonials" class="testimonials">
-    <h2>Depoimentos</h2>
-    <img src="img/testimonials.jpg" alt="Clientes satisfeitos">
-    <p>"A Dayana transformou minha vida! Hoje consigo fazer atividades que antes eram impossíveis. Gratidão eterna!" - Maria S.</p>
-    <p>"Profissional maravilhosa, atenciosa e extremamente competente. Recomendo a todos!" - João P.</p>
-</section>
+  <!-- OFFCANVAS MOBILE MENU -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header" style="border-bottom:1px solid var(--accent-soft);">
+      <div class="navbar-brand-logo">
+        <div class="brand-icon"><i class="bi bi-activity"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">VivaMov</span>
+          <span class="brand-tagline">Fisioterapia</span>
+        </div>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column gap-1 pt-3">
+      <a href="#about"        class="nav-link-custom py-3 border-bottom" data-bs-dismiss="offcanvas">
+        <i class="bi bi-person-heart me-2" style="color:var(--primary);"></i>Sobre
+      </a>
+      <a href="#services"     class="nav-link-custom py-3 border-bottom" data-bs-dismiss="offcanvas">
+        <i class="bi bi-clipboard2-pulse me-2" style="color:var(--primary);"></i>Serviços
+      </a>
+      <a href="#testimonials" class="nav-link-custom py-3 border-bottom" data-bs-dismiss="offcanvas">
+        <i class="bi bi-chat-quote me-2" style="color:var(--primary);"></i>Depoimentos
+      </a>
+      <a href="#contact"      class="nav-link-custom py-3 border-bottom" data-bs-dismiss="offcanvas">
+        <i class="bi bi-telephone me-2" style="color:var(--primary);"></i>Contato
+      </a>
+      <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20com%20a%20Dayana%20Aguiar."
+         target="_blank"
+         class="btn-whatsapp mt-3" data-bs-dismiss="offcanvas">
+        <i class="bi bi-whatsapp"></i> Agendar pelo WhatsApp
+      </a>
+    </div>
+  </div>
 
-<section id="contact" class="contact">
-    <h2>Contato</h2>
-    <p>📍 Rua da Saúde, 123, Centro, Sua Cidade</p>
-    <p>📞 (11) 99999-9999</p>
-    <p>📧 contato@vivamov.com</p>
-    <button id="contactButton">Agende sua avaliação</button>
-</section>
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
 
-<footer>
-    &copy; 2025 VivaMov Fisioterapia | Desenvolvido com carinho 💜
-</footer>
+    <div class="container hero-content py-5">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-7 col-xl-6">
+          <div class="hero-badge animate-fadeInUp">
+            <i class="bi bi-patch-check-fill"></i>
+            Fisioterapeuta Especialista
+          </div>
 
-<script src="script.js"></script>
+          <h1 class="hero-title animate-fadeInUp delay-1">
+            Recupere sua <span>saúde</span><br>com movimento
+          </h1>
+
+          <p class="hero-subtitle animate-fadeInUp delay-2">
+            Com Dayana Aguiar, cada sessão é pensada especialmente para você.
+            Técnicas modernas aliadas ao cuidado humano para sua evolução.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 animate-fadeInUp delay-3">
+            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20com%20a%20Dayana%20Aguiar."
+               target="_blank"
+               class="btn-hero-primary">
+              <i class="bi bi-whatsapp"></i> Agendar Avaliação
+            </a>
+            <a href="#about" class="btn-hero-secondary">
+              <i class="bi bi-play-circle"></i> Conheça mais
+            </a>
+          </div>
+
+          <div class="hero-stats animate-fadeInUp delay-4">
+            <div class="hero-stat">
+              <span class="hero-stat-value">+10</span>
+              <span class="hero-stat-label">Anos de experiência</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">500+</span>
+              <span class="hero-stat-label">Pacientes atendidos</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">98%</span>
+              <span class="hero-stat-label">Satisfação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero-scroll-indicator">
+      <div class="scroll-arrow"><i class="bi bi-chevron-down"></i></div>
+      <span>Rolar</span>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Image col -->
+        <div class="col-lg-5 reveal-left">
+          <div class="about-image-wrap">
+            <div class="about-image-frame">
+              <img src="img/dayana.jpg" alt="Dayana Aguiar — Fisioterapeuta">
+              <div class="about-badge-float">
+                <span class="badge-value">+10</span>
+                <span class="badge-label">anos de experiência</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text col -->
+        <div class="col-lg-7 reveal-right">
+          <div class="section-header">
+            <div class="section-tag">Sobre mim</div>
+            <h2 class="section-title">Dayana <span>Aguiar</span></h2>
+            <div class="section-divider" style="margin-left:0;"></div>
+          </div>
+
+          <p style="font-size:1rem;line-height:1.8;color:var(--text-muted);margin-bottom:1rem;">
+            Sou Dayana Aguiar, fisioterapeuta apaixonada por ajudar pessoas a recuperarem sua saúde e
+            qualidade de vida. Com mais de 10 anos de experiência, atendo com técnicas modernas e um olhar humano.
+          </p>
+          <p style="font-size:1rem;line-height:1.8;color:var(--text-muted);margin-bottom:2rem;">
+            Meu compromisso é com seu bem-estar e evolução. Cada plano de tratamento é
+            individualizado, respeitando o ritmo e as necessidades únicas de cada paciente.
+          </p>
+
+          <div class="mb-3">
+            <div class="credential-item">
+              <div class="credential-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <div class="credential-info">
+                <strong>Graduação em Fisioterapia</strong>
+                <span>Universidade Federal — Especialização em Ortopedia</span>
+              </div>
+            </div>
+            <div class="credential-item">
+              <div class="credential-icon"><i class="bi bi-award-fill"></i></div>
+              <div class="credential-info">
+                <strong>Certificação em Pilates Clínico</strong>
+                <span>Instituto Brasileira de Pilates — 2015</span>
+              </div>
+            </div>
+            <div class="credential-item">
+              <div class="credential-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div class="credential-info">
+                <strong>Pós-graduação em Reabilitação Neurológica</strong>
+                <span>Especialista em Recuperação Funcional</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20com%20a%20Dayana%20Aguiar."
+             target="_blank"
+             class="btn-about">
+            <i class="bi bi-whatsapp"></i> Fale comigo
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services">
+    <div class="container">
+
+      <div class="section-header text-center reveal">
+        <div class="section-tag justify-content-center">Nossos Serviços</div>
+        <h2 class="section-title">O que posso fazer <span>por você</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="service-card h-100">
+            <div class="service-card-img-wrap">
+              <img src="img/ortopedia.jpg" alt="Fisioterapia Ortopédica" class="service-card-img">
+              <span class="service-card-tag">Ortopedia</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon"><i class="bi bi-bandaid-fill"></i></div>
+              <h3 class="service-card-title">Fisioterapia Ortopédica</h3>
+              <p class="service-card-text">
+                Tratamento de lesões musculares, articulares e ósseas para recuperação
+                rápida e eficiente, com protocolos personalizados.
+              </p>
+              <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20na%20Fisioterapia%20Ortopédica." target="_blank" class="btn-service">
+                Saiba mais <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4 reveal delay-1">
+          <div class="service-card h-100">
+            <div class="service-card-img-wrap">
+              <img src="img/pos_cirurgico.jpg" alt="Reabilitação Pós-Cirúrgica" class="service-card-img">
+              <span class="service-card-tag">Reabilitação</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon"><i class="bi bi-clipboard2-pulse-fill"></i></div>
+              <h3 class="service-card-title">Reabilitação Pós-Cirúrgica</h3>
+              <p class="service-card-text">
+                Acompanhamento especializado após cirurgias ortopédicas e neurológicas
+                para recuperação funcional completa e segura.
+              </p>
+              <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20na%20Reabilitação%20Pós-Cirúrgica." target="_blank" class="btn-service">
+                Saiba mais <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4 reveal delay-2">
+          <div class="service-card h-100">
+            <div class="service-card-img-wrap">
+              <img src="img/pilates.jpg" alt="Pilates Terapêutico" class="service-card-img">
+              <span class="service-card-tag">Pilates</span>
+            </div>
+            <div class="service-card-body">
+              <div class="service-icon"><i class="bi bi-person-arms-up"></i></div>
+              <h3 class="service-card-title">Pilates Terapêutico</h3>
+              <p class="service-card-text">
+                Exercícios personalizados para fortalecimento, flexibilidade e
+                alívio de dores crônicas com método baseado em evidências.
+              </p>
+              <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Pilates%20Terapêutico." target="_blank" class="btn-service">
+                Saiba mais <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials">
+    <div class="container">
+
+      <div class="section-header text-center reveal">
+        <div class="section-tag justify-content-center">Depoimentos</div>
+        <h2 class="section-title">O que dizem <span>meus pacientes</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Bootstrap Carousel -->
+      <div id="testimonialCarousel"
+           class="carousel slide testimonials-carousel reveal"
+           data-bs-ride="carousel"
+           data-bs-interval="5500"
+           style="padding: 0 4rem;">
+
+        <div class="carousel-indicators" style="bottom:-3rem;">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner pb-5">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card">
+                  <div class="testimonial-stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "A Dayana transformou minha vida! Chegui com dores crônicas no joelho que me impediam de caminhar normalmente.
+                    Após 3 meses de tratamento, hoje consigo fazer atividades que antes eram impossíveis. Gratidão eterna!"
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="testimonial-avatar-placeholder">M</div>
+                    <div>
+                      <span class="testimonial-author-name">Maria S.</span>
+                      <span class="testimonial-author-role">Paciente — Fisioterapia Ortopédica</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card">
+                  <div class="testimonial-stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Profissional maravilhosa, atenciosa e extremamente competente. Fiz minha reabilitação pós-operatória com ela
+                    e o resultado foi além do esperado. Me sinto como novo! Recomendo a todos!"
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="testimonial-avatar-placeholder">J</div>
+                    <div>
+                      <span class="testimonial-author-name">João P.</span>
+                      <span class="testimonial-author-role">Paciente — Reabilitação Pós-Cirúrgica</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card">
+                  <div class="testimonial-stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Comecei o pilates terapêutico sem expectativa e me surpreendi completamente. As dores nas costas que me atormentavam
+                    há anos foram embora em poucos meses. A Dayana é um anjo!"
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="testimonial-avatar-placeholder">A</div>
+                    <div>
+                      <span class="testimonial-author-name">Ana R.</span>
+                      <span class="testimonial-author-role">Paciente — Pilates Terapêutico</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.carousel-inner -->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Anterior">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Próximo">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="container">
+
+      <div class="section-header text-center reveal">
+        <div class="section-tag justify-content-center">Contato</div>
+        <h2 class="section-title">Vamos conversar <span>sobre sua saúde</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Info Card -->
+        <div class="col-lg-5 reveal-left">
+          <div class="contact-info-card">
+            <h3>Informações de Contato</h3>
+            <p>Estamos aqui para ajudar você a dar o primeiro passo rumo à sua recuperação.</p>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <div class="contact-item-text">
+                <strong>Endereço</strong>
+                <span>Rua da Saúde, 123, Centro — Sua Cidade</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="bi bi-telephone-fill"></i></div>
+              <div class="contact-item-text">
+                <strong>Telefone</strong>
+                <span>(11) 99999-9999</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div class="contact-item-text">
+                <strong>E-mail</strong>
+                <span>contato@vivamov.com</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="bi bi-clock-fill"></i></div>
+              <div class="contact-item-text">
+                <strong>Horário de Atendimento</strong>
+                <span>Seg – Sex: 8h às 18h | Sáb: 8h às 12h</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20com%20a%20Dayana%20Aguiar."
+               target="_blank"
+               class="btn-whatsapp mt-4">
+              <i class="bi bi-whatsapp"></i> Agende pelo WhatsApp
+            </a>
+
+            <div class="contact-social">
+              <a href="https://instagram.com/vivamovfisioterapia" target="_blank" aria-label="Instagram" class="social-btn">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://facebook.com/vivamovfisioterapia" target="_blank" aria-label="Facebook" class="social-btn">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="mailto:contato@vivamov.com" aria-label="E-mail" class="social-btn">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="col-lg-7 reveal-right">
+          <div class="contact-form-card">
+            <h4>Envie uma mensagem</h4>
+            <p>Preencha o formulário e entraremos em contato em breve ✨</p>
+
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="inputNome" class="form-label-vivamov">Nome completo</label>
+                  <input type="text" id="inputNome" name="nome" class="form-control form-control-vivamov"
+                         placeholder="Seu nome" required>
+                  <div class="invalid-feedback">Por favor, informe seu nome.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="inputTelefone" class="form-label-vivamov">Telefone / WhatsApp</label>
+                  <input type="tel" id="inputTelefone" name="telefone" class="form-control form-control-vivamov"
+                         placeholder="(11) 99999-9999" required>
+                  <div class="invalid-feedback">Por favor, informe seu telefone.</div>
+                </div>
+                <div class="col-12">
+                  <label for="inputEmail" class="form-label-vivamov">E-mail</label>
+                  <input type="email" id="inputEmail" name="email" class="form-control form-control-vivamov"
+                         placeholder="seuemail@exemplo.com" required>
+                  <div class="invalid-feedback">Por favor, informe um e-mail válido.</div>
+                </div>
+                <div class="col-12">
+                  <label for="inputServico" class="form-label-vivamov">Serviço de interesse</label>
+                  <select id="inputServico" name="servico" class="form-control form-control-vivamov">
+                    <option value="" disabled selected>Selecione um serviço</option>
+                    <option value="ortopedica">Fisioterapia Ortopédica</option>
+                    <option value="cirurgica">Reabilitação Pós-Cirúrgica</option>
+                    <option value="pilates">Pilates Terapêutico</option>
+                    <option value="outros">Outros</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="inputMensagem" class="form-label-vivamov">Mensagem</label>
+                  <textarea id="inputMensagem" name="mensagem" class="form-control form-control-vivamov"
+                            rows="4" placeholder="Conte-me um pouco sobre o que está sentindo..." required></textarea>
+                  <div class="invalid-feedback">Por favor, escreva sua mensagem.</div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" id="submitFormBtn" class="btn-submit-form">
+                    <i class="bi bi-send-fill"></i> Enviar Mensagem
+                  </button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Brand col -->
+        <div class="col-lg-4">
+          <div class="footer-brand mb-3">
+            <div class="navbar-brand-logo">
+              <div class="brand-icon"><i class="bi bi-activity"></i></div>
+              <div class="brand-text">
+                <span class="brand-name">VivaMov</span>
+                <span class="brand-tagline">Fisioterapia</span>
+              </div>
+            </div>
+          </div>
+          <p>Cuidando de você com carinho, movimento e ciência. Sua saúde é nossa missão.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/vivamovfisioterapia" target="_blank" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://facebook.com/vivamovfisioterapia" target="_blank" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://wa.me/5511999999999" target="_blank" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="mailto:contato@vivamov.com" aria-label="E-mail">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-sm-6 col-lg-2">
+          <p class="footer-heading">Links Rápidos</p>
+          <ul class="footer-links">
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#testimonials">Depoimentos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Services links -->
+        <div class="col-sm-6 col-lg-3">
+          <p class="footer-heading">Serviços</p>
+          <ul class="footer-links">
+            <li><a href="#services">Fisioterapia Ortopédica</a></li>
+            <li><a href="#services">Reabilitação Pós-Cirúrgica</a></li>
+            <li><a href="#services">Pilates Terapêutico</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact info -->
+        <div class="col-lg-3">
+          <p class="footer-heading">Contato</p>
+          <ul class="footer-links">
+            <li>
+              <a href="tel:+5511999999999">
+                <i class="bi bi-telephone-fill" style="color:var(--primary-light);margin-right:4px;"></i>
+                (11) 99999-9999
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contato@vivamov.com">
+                <i class="bi bi-envelope-fill" style="color:var(--primary-light);margin-right:4px;"></i>
+                contato@vivamov.com
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <i class="bi bi-geo-alt-fill" style="color:var(--primary-light);margin-right:4px;"></i>
+                Rua da Saúde, 123 — Centro
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-divider"></div>
+      <p class="footer-copy">
+        © 2025 <strong style="color:rgba(255,255,255,0.6);">VivaMov Fisioterapia</strong> — Todos os direitos reservados.
+        Desenvolvido com <span style="color:#c9b8e8;">💜</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" aria-label="Voltar ao topo">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
